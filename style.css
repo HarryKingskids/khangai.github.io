@@ -1,10 +1,15 @@
-
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f8;
   color: #333;
   text-align: center;
   padding: 40px;
+  transition: all 0.4s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
 }
 
 img {
@@ -24,9 +29,26 @@ h1 {
   max-width: 500px;
   margin: 20px auto;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: background 0.4s ease;
 }
 
-/* 🔥 Fade-in animation */
+body.dark-mode .card {
+  background: #1e1e1e;
+}
+
+button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #2c3e50;
+  color: white;
+  font-size: 14px;
+}
+
 @keyframes fadeIn {
   0% { opacity: 0; transform: translateY(-20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -34,4 +56,24 @@ h1 {
 
 .fade-in {
   animation: fadeIn 2s ease-in-out;
+}
+
+/* Typing animation */
+#typed-text {
+  font-weight: bold;
+  font-size: 18px;
+  color: #0066cc;
+}
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  background-color: #0066cc;
+  animation: blink 0.7s steps(2, start) infinite;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
