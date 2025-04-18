@@ -4,7 +4,7 @@
   <title>Edit Profile</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="loadProfile()">
+<body>
   <div class="login-card">
     <h2>Edit Profile</h2>
 
@@ -23,6 +23,13 @@
     <div id="preview"></div>
   </div>
 
+  <!-- ✅ Load script.js at the end so all functions are available -->
   <script src="script.js"></script>
+  <script>
+    // ✅ Run loadProfile only after everything loads
+    window.onload = function () {
+      loadProfile();
+    };
+  </script>
 </body>
 </html>
