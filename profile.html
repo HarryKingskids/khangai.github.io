@@ -23,13 +23,13 @@
     <div id="preview"></div>
   </div>
 
-  <!-- ✅ Load script.js at the end so all functions are available -->
+  <!-- ✅ Load script.js AFTER HTML is fully ready -->
   <script src="script.js"></script>
   <script>
-    // ✅ Run loadProfile only after everything loads
-    window.onload = function () {
+    // ✅ Safely call loadProfile after everything is loaded
+    document.addEventListener("DOMContentLoaded", function () {
       loadProfile();
-    };
+    });
   </script>
 </body>
 </html>
