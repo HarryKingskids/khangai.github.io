@@ -8,8 +8,13 @@
   <div class="login-card">
     <h1>Job Finder</h1>
 
-    <input type="text" id="username" placeholder="Enter username">
-    <input type="password" id="password" placeholder="Enter password">
+    <select id="role">
+      <option value="user">User</option>
+      <option value="company">Company</option>
+    </select>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
 
     <button onclick="login()">Log In</button>
     <button onclick="signup()">Sign Up</button>
@@ -17,7 +22,6 @@
     <p id="msg"></p>
   </div>
 
-  <!-- ✅ Load JS after everything -->
   <script src="script.js"></script>
 </body>
 </html>
