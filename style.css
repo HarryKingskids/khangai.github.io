@@ -1,90 +1,41 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f0f4f8;
-  color: #333;
   text-align: center;
   padding: 40px;
-  transition: all 0.4s ease;
+  background-color: #f0f4f8;
 }
 
-body.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-}
-
-h1 {
-  color: #2c3e50;
-}
-
-.card {
+.login-card, .header, .jobs, .saved {
   background: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 500px;
+  max-width: 400px;
   margin: 20px auto;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: background 0.4s ease;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-body.dark-mode .card {
-  background: #1e1e1e;
+input {
+  display: block;
+  margin: 10px auto;
+  padding: 8px;
+  width: 80%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
 }
 
 button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
+  margin-top: 10px;
   padding: 8px 14px;
   border: none;
   border-radius: 20px;
-  cursor: pointer;
-  background: #2c3e50;
+  background-color: #2c3e50;
   color: white;
-  font-size: 14px;
+  cursor: pointer;
 }
 
-@keyframes fadeIn {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.fade-in {
-  animation: fadeIn 2s ease-in-out;
-}
-
-/* Typing animation */
-#typed-text {
-  font-weight: bold;
-  font-size: 18px;
-  color: #0066cc;
-}
-.reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.6s ease;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-.cursor {
-  display: inline-block;
-  width: 1px;
-  background-color: #0066cc;
-  animation: blink 0.7s steps(2, start) infinite;
-  margin-left: 2px;
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+.job-card {
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
 }
