@@ -1,16 +1,17 @@
-// Signup and Login
+ // ✅ Signup
 function signup() {
   const user = document.getElementById('username').value;
   const pass = document.getElementById('password').value;
 
   if (user && pass) {
     localStorage.setItem(user, pass);
-    document.getElementById('msg').textContent = "User registered!";
+    document.getElementById('msg').textContent = "✅ Registered successfully!";
   } else {
-    document.getElementById('msg').textContent = "Fill all fields!";
+    document.getElementById('msg').textContent = "❗ Fill in all fields!";
   }
 }
 
+// ✅ Login
 function login() {
   const user = document.getElementById('username').value;
   const pass = document.getElementById('password').value;
@@ -20,11 +21,11 @@ function login() {
     localStorage.setItem("loggedInUser", user);
     window.location.href = "home.html";
   } else {
-    document.getElementById('msg').textContent = "Wrong username or password.";
+    document.getElementById('msg').textContent = "❌ Wrong username or password.";
   }
 }
 
-// Check if logged in on home.html
+// ✅ Check login status
 function checkLogin() {
   const user = localStorage.getItem("loggedInUser");
   if (!user) {
@@ -35,13 +36,13 @@ function checkLogin() {
   }
 }
 
-// Logout
+// ✅ Logout
 function logout() {
   localStorage.removeItem("loggedInUser");
   window.location.href = "index.html";
 }
 
-// Save jobs
+// ✅ Save job
 function saveJob(jobName) {
   const user = localStorage.getItem("loggedInUser");
   if (!user) return;
@@ -54,7 +55,7 @@ function saveJob(jobName) {
   }
 }
 
-// Load saved jobs
+// ✅ Load saved jobs
 function loadSavedJobs() {
   const user = localStorage.getItem("loggedInUser");
   const savedJobs = JSON.parse(localStorage.getItem(user + "_jobs")) || [];
