@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Job Finder - Login</title>
+  <title>Login / Sign Up</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="login-card">
-    <h1>Job Finder</h1>
-
-    <select id="role">
-      <option value="user">User</option>
-      <option value="company">Company</option>
-    </select>
-
+    <h2>Welcome to JobFinder</h2>
+    
     <input type="text" id="username" placeholder="Username">
     <input type="password" id="password" placeholder="Password">
-
+    
     <button onclick="login()">Log In</button>
     <button onclick="signup()">Sign Up</button>
-
-    <p id="msg"></p>
+    
+    <p id="loginMsg"></p>
   </div>
 
+  <!-- ✅ This script should be LAST in the body -->
   <script src="script.js"></script>
 </body>
 </html>
