@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="loadProfile()">
+  <div class="login-card">
+    <h2>Edit Profile</h2>
+
+    <input type="text" id="name" placeholder="Your Name">
+    <textarea id="bio" placeholder="Write something..."></textarea>
+
+    <label>Upload Picture</label>
+    <input type="file" id="image" accept="image/*"><br>
+
+    <label>Upload Video</label>
+    <input type="file" id="video" accept="video/*"><br>
+
+    <button onclick="saveProfile()">Save Profile</button>
+    <p id="msg"></p>
+
+    <div id="preview"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
