@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Job Finder - Home</title>
+  <title>User Dashboard</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body onload="checkLogin()">
+<body onload="checkLogin('user')">
   <div class="header">
-    <h2>Welcome to Job Finder</h2>
-    <button onclick="logout()">Log Out</button>
+    <h2>Welcome, User</h2>
+    <button onclick="logout()">Logout</button>
+    <a href="profile.html"><button>Edit Profile</button></a>
   </div>
 
   <div class="jobs">
     <h3>Available Jobs:</h3>
-
     <div class="job-card">
       <p><strong>Software Intern</strong> at TechCorp</p>
       <button onclick="saveJob('Software Intern')">Save Job</button>
     </div>
-
-    <div class="job-card">
-      <p><strong>Web Dev Assistant</strong> at Creatix</p>
-      <button onclick="saveJob('Web Dev Assistant')">Save Job</button>
-    </div>
-
     <div class="job-card">
       <p><strong>UI/UX Designer</strong> at PixelWorks</p>
       <button onclick="saveJob('UI/UX Designer')">Save Job</button>
