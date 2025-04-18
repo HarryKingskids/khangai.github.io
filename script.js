@@ -15,8 +15,3 @@ function type() {
     setTimeout(type, 60);
   }
 }
-
-window.onload = function() {
-  type();
-  console.log("Site loaded with dark mode and typing effect!");
-};
