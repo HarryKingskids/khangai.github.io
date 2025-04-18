@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Job Finder Login</title>
+  <title>Job Finder - Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="login-card">
-    <h1>Job Finder</h1>
+<body onload="checkLogin()">
+  <div class="header">
+    <h2>Welcome to Job Finder</h2>
+    <button onclick="logout()">Log Out</button>
+  </div>
 
-    <input type="text" id="username" placeholder="Enter username">
-    <input type="password" id="password" placeholder="Enter password">
+  <div class="jobs">
+    <h3>Available Jobs:</h3>
+    <div class="job-card">
+      <p><strong>Software Intern</strong> at TechCorp</p>
+      <button onclick="saveJob('Software Intern')">Save Job</button>
+    </div>
+    <div class="job-card">
+      <p><strong>Web Dev Assistant</strong> at Creatix</p>
+      <button onclick="saveJob('Web Dev Assistant')">Save Job</button>
+    </div>
+  </div>
 
-    <button onclick="login()">Log In</button>
-    <button onclick="signup()">Sign Up</button>
-
-    <p id="msg"></p>
+  <div class="saved">
+    <h3>Saved Jobs:</h3>
+    <ul id="savedJobsList"></ul>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
